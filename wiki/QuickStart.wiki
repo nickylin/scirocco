@@ -3,11 +3,13 @@
 = Quick Start =
 
 このガイドでは、sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
-
+<br>
+<br>
 = Installing the plugin =
 
 If you are already familiar with installing Eclipse plugins, you can just use the update site URL below for your version of Eclipse.
-Eclipse 3.6 (Helios)
-http://184.73.200.19/android/eclipse/ 
-
-= Check Out Sample Android Project =
+====Eclipse 3.6 (Helios)====
+<font color="green">http://184.73.200.19/android/eclipse</font> 
+<br>
+<br>
+= CheckOut Sample Android Project =
