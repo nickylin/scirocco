@@ -1,4 +1,5 @@
 #summary One-sentence summary of this page.
+#labels QuickStart
 
 = Quick Start =
 
@@ -18,14 +19,8 @@ Then you import ExampleProject_v1.0.zip by clicking on File --> Import --> Exist
 <br>
 <br>
 = Example test project =
-In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test NotePad. NotePad is a sample project located in AndroidSDK/samples/android-9/NotePad.
+In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
 
+Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
 
-
-In Eclipse click on File --> New --> Project --> Android Project --> Create Project from existing source --> NotePad.
-
-Then you import ExampleTestProject_v2.3.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v2.3.zip.
-
-Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Run As Android JUnit Test.
-
-If you have problems running the test project or some Robotium functionality is not working as it should then please add the following tag to the AndroidManifest.xml
+Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Scirocco JUnit Test.
