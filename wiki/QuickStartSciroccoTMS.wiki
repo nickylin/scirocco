@@ -1,13 +1,8 @@
 #summary Quick Start Scirocco TMS.
 
-= Introduction =
+= Quick Start scirocco=
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+このガイドでは、sciroccoTMSを使ってsciroccoのテスト報告書をWeb上で共有する方法を説明します。
+<br>
+<br>
+= Installing the scirocco plugin =
