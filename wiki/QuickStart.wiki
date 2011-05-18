@@ -12,4 +12,20 @@ If you are already familiar with installing Eclipse plugins, you can just use th
 <font color="green">http://184.73.200.19/android/eclipse</font> 
 <br>
 <br>
-= CheckOut Sample Android Project =
+= Download Example project =
+In the Downloads section you will find ExampleProject_v1.0.zip.
+Then you import ExampleProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleProject_v1.0.zip.
+<br>
+<br>
+= Example test project =
+In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test NotePad. NotePad is a sample project located in AndroidSDK/samples/android-9/NotePad.
+
+
+
+In Eclipse click on File --> New --> Project --> Android Project --> Create Project from existing source --> NotePad.
+
+Then you import ExampleTestProject_v2.3.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v2.3.zip.
+
+Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Run As Android JUnit Test.
+
+If you have problems running the test project or some Robotium functionality is not working as it should then please add the following tag to the AndroidManifest.xml
