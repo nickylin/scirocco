@@ -1,0 +1,47 @@
+#summary Quick Start scirocco.
+#labels QuickStart,scirocco
+
+= Quick Start scirocco=
+
+このガイドでは、sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
+<br>
+<br>
+= Installing the scirocco plugin =
+
+If you are already familiar with installing Eclipse plugins, you can just use the update site URL below for your version of Eclipse.
+====Eclipse 3.6 (Helios)====
+<font color="green">http://184.73.200.19/android/eclipse</font> 
+<br>
+<br>
+= Download Example Application project =
+In the Downloads section you will find ExampleApplicationProject_v1.0.zip.
+Then you import ExampleApplicationProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleApplicationProject_v1.0.zip.
+
+アプリケーションプロジェクトのAndroidManifest.xmlを開き、以下のパーミッションが設定されている事を確認してください。この設定はテスト時にスクリーンショットを取得する場合に必要です。
+{{{
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+}}}
+
+<br>
+<br>
+= Download Example test project =
+In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
+
+Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
+
+テストプロジェクトが以下のjarファイルを参照していることを確認してください。
+sciroccoでテストを実行するために必要です。
+ * robotium.jar
+ * scirocco.jar
+
+
+= Run Scirocco JUnit Test =
+Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Scirocco JUnit Test.
+
+テストの実行が終わると、テストプロジェクト内にsciroccoフォルダが作成されます。テスト結果が記述されたテスト報告書は、sciroccoフォルダ内に作成されています。
+
+
+= テスト報告書をプロジェクトメンバーと共有するには？ =
+テスト報告書をプロジェクトメンバーと共有したい場合は、scirocco TMSを使ってください。
+sciroccoTMSはテスト報告書をWeb上で共有するためのテスト管理システムです。
+[http://code.google.com/p/scirocco/w/edit/QuickStartSciroccoTMS QuickStartSciroccoTMS]
