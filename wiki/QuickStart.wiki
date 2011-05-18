@@ -1,13 +1,13 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= Quick Start =
 
-Add your content here.
+このガイドでは、sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
 
+= Installing the plugin =
 
-= Details =
+If you are already familiar with installing Eclipse plugins, you can just use the update site URL below for your version of Eclipse.
+Eclipse 3.6 (Helios)
+http://184.73.200.19/android/eclipse/ 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Check Out Sample Android Project =
