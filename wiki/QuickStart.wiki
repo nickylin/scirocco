@@ -1,12 +1,12 @@
 #labels QuickStart
 #QuickStart.
 
-= Quick Start =
+= Quick Start scirocco=
 
 このガイドでは、sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
 <br>
 <br>
-= Installing the plugin =
+= Installing the scirocco plugin =
 
 If you are already familiar with installing Eclipse plugins, you can just use the update site URL below for your version of Eclipse.
 ====Eclipse 3.6 (Helios)====
@@ -29,8 +29,8 @@ In the Downloads section you will find ExampleTestProject_v1.0.zip which is an e
 
 Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
 
-テストプロジェクトが2つのjarファイルを参照していることを確認してください。
-sciroccoでテストを実行するために必要な設定です。
+テストプロジェクトが以下のjarファイルを参照していることを確認してください。
+sciroccoでテストを実行するために必要です。
  * robotium.jar
  * scirocco.jar
 
