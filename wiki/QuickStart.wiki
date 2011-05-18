@@ -13,15 +13,27 @@ If you are already familiar with installing Eclipse plugins, you can just use th
 <font color="green">http://184.73.200.19/android/eclipse</font> 
 <br>
 <br>
-= Download Example project =
-In the Downloads section you will find ExampleProject_v1.0.zip.
-Then you import ExampleProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleProject_v1.0.zip.
+= Download Example Application project =
+In the Downloads section you will find ExampleApplicationProject_v1.0.zip.
+Then you import ExampleApplicationProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleApplicationProject_v1.0.zip.
+
+アプリケーションプロジェクトのAndroidManifest.xmlを開き、以下のパーミッションが設定されている事を確認してください。この設定はテスト時にスクリーンショットを取得する場合に必要です。
+{{{
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+}}}
+
 <br>
 <br>
 = Download Example test project =
 In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
 
 Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
+
+テストプロジェクトが2つのjarファイルを参照していることを確認してください。
+sciroccoでテストを実行するために必要な設定です。
+ * robotium.jar
+ * scirocco.jar
+
 
 = Run Scirocco JUnit Test =
 Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Scirocco JUnit Test.
