@@ -18,9 +18,10 @@ In the Downloads section you will find ExampleProject_v1.0.zip.
 Then you import ExampleProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleProject_v1.0.zip.
 <br>
 <br>
-= Example test project =
+= Download Example test project =
 In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
 
 Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
 
+= Run Scirocco JUnit Test =
 Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Scirocco JUnit Test.
