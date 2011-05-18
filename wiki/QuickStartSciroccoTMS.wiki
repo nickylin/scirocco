@@ -13,7 +13,7 @@ sciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理シス�
 sciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
 
 ===RubyおよびRuby on rails ===
-scriccoTMSで必要となるRailsのバージョンは以下の通りです。
+scriccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
 || *Ruby* || *Rails* ||
 || 1.8.6 || 2.3.5 ||
 
@@ -54,17 +54,17 @@ gem install hpricot
 {{{
 svn co TODO
 }}}
-===WEBrickによるwebサーバを起動して、インストールができたかテストしてください===
+===WEBrickのwebサーバを起動して、インストールができたかテストしてください===
 {{{
 ruby script/server webrick -e production
 }}}
 WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページが表示されるはずです。
 
-注意: Webrickは通常は開発時に使用すものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails)  の利用を検討してください。
+注意: Webrickは通常は開発時に使用するものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails)  の利用を検討してください。
 
 ===EclipseでsciroccoTMSのURLを設定===
 Eclipseを起動し、メニューバーから Eclipce > 環境設定　> scirocco 
-sciorcco TMS URLに「http://localhost:3000」を指定してOKボタンをクリック
+sciorcco TMS URLにhttp://localhost:3000を指定してOKボタンをクリック
 
 ===sciroccoでテストを実行し、sciroccoTMSにデータが登録されたかテストしてください===
 ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページに、テストを実行してプロジェクトの名前が表示されるはずです。
