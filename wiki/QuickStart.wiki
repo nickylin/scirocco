@@ -41,7 +41,7 @@ Then you can run these test cases either on the emulator or on device. You right
 テストの実行が終わると、テストプロジェクト内にsciroccoフォルダが作成されます。テスト結果が記述されたテスト報告書は、sciroccoフォルダ内に作成されています。
 
 
-= Appendix =
+= テスト報告書をプロジェクトメンバーと共有するには？ =
 テスト報告書をプロジェクトメンバーと共有したい場合は、scirocco TMSを使ってください。
-sciroccoTMSはテスト結果をWeb上で共有するためのテスト管理システムです。
+sciroccoTMSはテスト報告書をWeb上で共有するためのテスト管理システムです。
 [http://code.google.com/p/scirocco/w/edit/QuickStartSciroccoTMS QuickStartSciroccoTMS]
