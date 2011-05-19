@@ -25,7 +25,7 @@ EclipseのFileタブからimport > Existing Project into workspace > select arch
 <br>
 = ExampleTestProject のインポート =
 テストプロジェクトの動きを確認する為のExampleTestProjectのインポート方法です。
-EclipseのFileタブからimport > Existing Project into workspace > select archive file > ExampleApplicationProject.zipを選択して下さい。
+EclipseのFileタブからimport > Existing Project into workspace > select archive file > ExampleApplicationProject¥.zipを選択して下さい。
 
 テストプロジェクトが以下のjarファイルを参照していることを確認してください。
 sciroccoでテストを実行するために必要です。
