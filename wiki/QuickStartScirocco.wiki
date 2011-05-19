@@ -1,5 +1,6 @@
 #summary Quick Start scirocco.
 #labels QuickStart,scirocco
+#sidebar QuickStartScirocco
 
 = Quick Start scirocco=
 
