@@ -1,4 +1,4 @@
-#summary Quick Start scirocco.
+#summary クイックスタート scirocco.
 #labels QuickStart,Japanese
 
 = クイックスタート scirocco=
