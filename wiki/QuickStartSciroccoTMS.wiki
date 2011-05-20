@@ -67,4 +67,4 @@ Eclipseを起動し、メニューバーから Eclipce > 環境設定　> sciroc
 sciorcco TMS URLにhttp://localhost:3000を指定してOKボタンをクリック
 
 ===sciroccoでテストを実行し、sciroccoTMSにデータが登録されたかテストしてください===
-ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページに、テストを実行してプロジェクトの名前が表示されるはずです。
+ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページに、テストプロジェクトの名前が表示されるはずです。
