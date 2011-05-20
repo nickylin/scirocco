@@ -1,4 +1,6 @@
+#summary クイックスタート SciroccoTMS.
 #labels QuickStart,sciroccoTMS,Japanese
+
 Quick Start SciroccoTMS
 SciroccoTMSはRubyOnRails?で実装されたWebベースのテスト管理システムです。
 
