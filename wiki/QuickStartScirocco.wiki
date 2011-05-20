@@ -15,7 +15,7 @@ If you are already familiar with installing Eclipse plugins, you can just use th
 <br>
 <br>
 = Download Example Application project =
-In the Downloads section you will find ExampleApplicationProject_v1.0.zip.
+In the Downloads section you will find ` ExampleApplicationProject_v1.0.zip. `
 Then you import ExampleApplicationProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleApplicationProject_v1.0.zip.
 
 Open an AndroidManufest.xml file of target application and make sure following permissions are set. It is necessary to capture screenshots.
@@ -26,7 +26,7 @@ Open an AndroidManufest.xml file of target application and make sure following p
 <br>
 <br>
 = Download Example test project =
-In the Downloads section you will find *ExampleTestProject_v1.0.zip* which is an example test project created in Eclipse to test ExampleProject.
+In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
 
 Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
 
