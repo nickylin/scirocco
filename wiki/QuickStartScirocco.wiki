@@ -26,7 +26,7 @@ Open an AndroidManufest.xml file of target application and make sure following p
 <br>
 <br>
 = Download Example test project =
-In the Downloads section you will find 'ExampleTestProject_v1.0.zip' which is an example test project created in Eclipse to test ExampleProject.
+In the Downloads section you will find *ExampleTestProject_v1.0.zip* which is an example test project created in Eclipse to test ExampleProject.
 
 Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
 
