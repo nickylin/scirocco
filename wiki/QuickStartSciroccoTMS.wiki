@@ -25,8 +25,8 @@ sqlite 3
 == Mac OS X ==
 
 
-=== install rvm===
-(RVM is a tool which enable to install and control number of Ruby distribution on UNIX.)
+=== install RVM===
+(RVM is a command-line tool to manage multiple Ruby versions.)
 {{{
 mkdir -p ~/.rvm/src
 cd .rvm/src/
@@ -67,7 +67,7 @@ ruby script/server webrick -e production
 ===SciroccoTMS URL setting===
 1. Start Eclipse
 2. Click Eclipse in menu tab
-3. Click [環境設定]
+3. Click Preferences
 4. Click scirocco 
 5. Enter http://localhost:3000 in sciorcco TMS URL field
 6. Click OK button
