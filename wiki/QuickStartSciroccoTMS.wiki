@@ -3,7 +3,6 @@
 
 = Quick Start SciroccoTMS=
 Scirocco is a web-based test management system which is made by RubyOnRails.
-This page explain how to share your scirocco test report on web by scirocco TMS.
 
 <br>
 <br>
@@ -11,7 +10,7 @@ This page explain how to share your scirocco test report on web by scirocco TMS.
 ===OS===
 SciroccoTMS can run on Windows, UNIX, Linux etc. as long as it is able to run Ruby.
 
-===Ruby and Ruby on rails ===
+===Ruby and Ruby on Rails ===
 Needed Ruby and Rails version are as below.
 || *Ruby* || *Rails* ||
 || 1.8.6 || 2.3.5 ||
@@ -22,7 +21,7 @@ sqlite 3
 <br>
 <br>
 = How to install SciroccoTMS =
-== Mac OS X ==
+== (Mac OS X) ==
 
 
 === install RVM===
