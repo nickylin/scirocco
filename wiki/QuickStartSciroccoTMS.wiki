@@ -13,7 +13,7 @@ SciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理シス�
 SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
 
 ===RubyおよびRuby on rails ===
-scriccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
+SciroccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
 || *Ruby* || *Rails* ||
 || 1.8.6 || 2.3.5 ||
 
