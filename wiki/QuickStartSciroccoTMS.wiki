@@ -1,16 +1,16 @@
-#summary Quick Start sciroccoTMS.
+#summary Quick Start SciroccoTMS.
 #labels QuickStart,sciroccoTMS
 
-= Quick Start sciroccoTMS=
-sciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです。
+= Quick Start SciroccoTMS=
+SciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです。
 
-このガイドでは、sciroccoTMSを使ってsciroccoのテスト報告書をWeb上で共有する方法を説明します。
+このガイドでは、SciroccoTMSを使ってSciroccoのテスト報告書をWeb上で共有する方法を説明します。
 
 <br>
 <br>
 = 必要な環境 =
 ===OS===
-sciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
+SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
 
 ===RubyおよびRuby on rails ===
 scriccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
@@ -23,7 +23,7 @@ sqlite 3
 <br>
 <br>
 = インストール =
-Mac OS XにsciroccoTMSをインストールする手順を説明します。
+Mac OS XにSciroccoTMSをインストールする手順を説明します。
 
 ===rvmインストール===
 (RVMはUNIX系の環境で，複数のRuby処理系をインストール，共存させることができるツールです)
@@ -50,7 +50,7 @@ gem install sqlite3-ruby -v 1.2.5
 gem install zipruby
 gem install hpricot
 }}}
-===sciroccoTMSをインストール===
+===SciroccoTMSをインストール===
 {{{
 svn co TODO
 }}}
@@ -58,13 +58,13 @@ svn co TODO
 {{{
 ruby script/server webrick -e production
 }}}
-WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページが表示されるはずです。
+WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページが表示されるはずです。
 
 注意: Webrickは通常は開発時に使用するものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails)  の利用を検討してください。
 
-===EclipseでsciroccoTMSのURLを設定===
-Eclipseを起動し、メニューバーから Eclipce > 環境設定　> scirocco 
+===EclipseでSciroccoTMSのURLを設定===
+Eclipseを起動し、メニューバーから Eclipce > 環境設定　> Scirocco 
 sciorcco TMS URLにhttp://localhost:3000を指定してOKボタンをクリック
 
-===sciroccoでテストを実行し、sciroccoTMSにデータが登録されたかテストしてください===
-ブラウザで http://localhost:3000/ を開いてください。sciroccoTMSのトップページに、テストプロジェクトの名前が表示されるはずです。
+===Sciroccoでテストを実行し、SciroccoTMSにデータが登録されたかテストしてください===
+ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページに、テストプロジェクトの名前が表示されるはずです。
