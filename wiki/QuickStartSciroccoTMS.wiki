@@ -2,31 +2,31 @@
 #labels QuickStart,sciroccoTMS
 
 = Quick Start SciroccoTMS=
-SciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです。
-
-このガイドでは、SciroccoTMSを使ってSciroccoのテスト報告書をWeb上で共有する方法を説明します。
+Scirocco is a web-based test management system which is made by RubyOnRails.
+This page explain how to share your scirocco test report on web by scirocco TMS.
 
 <br>
 <br>
-= 必要な環境 =
+= Needed Environment =
 ===OS===
-SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
+SciroccoTMS can run on Windows, UNIX, Linux etc. as long as it is able to run Ruby.
 
-===RubyおよびRuby on rails ===
-SciroccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
+===Ruby and Ruby on rails ===
+Needed Ruby and Rails version are as below.
 || *Ruby* || *Rails* ||
 || 1.8.6 || 2.3.5 ||
 
-===データベース===
+===Database===
 sqlite 3
 
 <br>
 <br>
-= インストール =
-Mac OS XにSciroccoTMSをインストールする手順を説明します。
+= How to install SciroccoTMS =
+== Mac OS X ==
 
-===rvmインストール===
-(RVMはUNIX系の環境で，複数のRuby処理系をインストール，共存させることができるツールです)
+
+=== install rvm===
+(RVM is a tool which enable to install and control number of Ruby distribution on UNIX.)
 {{{
 mkdir -p ~/.rvm/src
 cd .rvm/src/
@@ -36,7 +36,7 @@ cd rvm/
 vim ~/.bashrc
 source ~/.bashrc
 }}}
-===ruby1.8.6 と rails2.3.5をインストール===
+=== install ruby1.8.6 and rails2.3.5===
 {{{
 rvm install 1.8.6
 rvm use 1.8.6 --default
@@ -44,27 +44,34 @@ rvm gemset create rails2
 rvm use 1.8.6@rails2 --default
 gem install rails -v2.3.5
 }}}
-===必要なライブラリをインストール===
+===install necessary Libraries===
 {{{
 gem install sqlite3-ruby -v 1.2.5
 gem install zipruby
 gem install hpricot
 }}}
-===SciroccoTMSをインストール===
+===install SciroccoTMS===
 {{{
 svn co TODO
 }}}
-===WEBrickのwebサーバを起動して、インストールができたかテストしてください===
+===CHECK===
 {{{
 ruby script/server webrick -e production
 }}}
-WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページが表示されるはずです。
 
-注意: Webrickは通常は開発時に使用するものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails)  の利用を検討してください。
+1. Start WEBrick
+2. Then access http://localhost:3000/ by browser.
+3. If you can access successfully TOP PAGE of sciroccoTMS 
 
-===EclipseでSciroccoTMSのURLを設定===
-Eclipseを起動し、メニューバーから Eclipce > 環境設定　> Scirocco 
-sciorcco TMS URLにhttp://localhost:3000を指定してOKボタンをクリック
 
-===Sciroccoでテストを実行し、SciroccoTMSにデータが登録されたかテストしてください===
-ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページに、テストプロジェクトの名前が表示されるはずです。
+===SciroccoTMS URL setting===
+1. Start Eclipse
+2. Click Eclipse in menu tab
+3. Click [環境設定]
+4. Click scirocco 
+5. Enter http://localhost:3000 in sciorcco TMS URL field
+6. Click OK button
+
+===Finishing installation===
+1. access http://localhost:3000/ by browser
+2. If sciroccoTMS is running properly, project name which you tested is there.
