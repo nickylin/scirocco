@@ -1,5 +1,5 @@
 #summary Quick Start scirocco.
-#labels QuickStart,scirocco
+#labels QuickStart,scirocco,Featured
 #sidebar NameOfPage
 
 = Quick Start scirocco=
