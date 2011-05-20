@@ -1,33 +1,32 @@
 #summary クイックスタート SciroccoTMS.
 #labels QuickStart,sciroccoTMS,Japanese
 
-Quick Start SciroccoTMS
-SciroccoTMSはRubyOnRails?で実装されたWebベースのテスト管理システムです。
+= Quick Start sciroccoTMS=
+SsciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです。
 
 このガイドでは、SciroccoTMSを使ってSciroccoのテスト報告書をWeb上で共有する方法を説明します。
-
-
-
-必要な環境
-OS
+<br>
+<br>
+=必要な環境=
+===OS===
 SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
 
-RubyおよびRuby on rails
+===RubyおよびRuby on rails===
 SciroccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
 
-Ruby	Rails
-1.8.6	 2.3.5
-データベース
+|| *Ruby* || *Rails* ||
+|| 1.8.6 || 2.3.5 ||
+=== データベース ===
 sqlite 3
-
-
-
-インストール
+<br>
+<br>
+= インストール =
 Mac OS XにSciroccoTMSをインストールする手順を説明します。
 
-rvmインストール
+===rvmインストール===
 (RVMはUNIX系の環境で，複数のRuby処理系をインストール，共存させることができるツールです)
 
+{{{
 mkdir -p ~/.rvm/src
 cd .rvm/src/
 git clone git://github.com/wayneeseguin/rvm.git
@@ -35,7 +34,9 @@ cd rvm/
 ./install
 vim ~/.bashrc
 source ~/.bashrc
-ruby1.8.6 と rails2.3.5をインストール
+}}}
+===ruby1.8.6 と rails2.3.5をインストール===
+{{{
 rvm install 1.8.6
 rvm use 1.8.6 --default
 rvm gemset create rails2
@@ -45,16 +46,19 @@ gem install rails -v2.3.5
 gem install sqlite3-ruby -v 1.2.5
 gem install zipruby
 gem install hpricot
-SciroccoTMSをインストール
+}}}
+===SciroccoTMSをインストール===
+{{{
 svn co TODO
-WEBrickのwebサーバを起動して、インストールができたかテストしてください
+}}}
+===WEBrickのwebサーバを起動し、動作確認===
 ruby script/server webrick -e production
 WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページが表示されるはずです。
 
 注意: Webrickは通常は開発時に使用するものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails) の利用を検討してください。
 
-EclipseでSciroccoTMSのURLを設定
+===EclipseでSciroccoTMSのURLを設定===
 Eclipseを起動し、メニューバーから Eclipce > 環境設定　> Scirocco sciorcco TMS URLにhttp://localhost:3000を指定してOKボタンをクリック
 
-Sciroccoでテストを実行し、SciroccoTMSにデータが登録されたかテストしてください
+===Sciroccoでテストを実行し、SciroccoTMSにデータが登録される事を確認===
 ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページに、テストプロジェクトの名前が表示されるはずです。
