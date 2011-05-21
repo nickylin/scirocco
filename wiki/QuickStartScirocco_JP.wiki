@@ -18,6 +18,7 @@
  # Select Allを選び、Next> をクリック
  # リストにSciroccoFeatureが有る事を確認してNext> をクリック
  # I accept the terms of the license agreement を選んで Finish を押す
+ # Eclipseメニューの環境設定 > Scirocco で、Android SDK Locationを指定してOKをクリック
 <br>
 || *Name:* || Scirocco ||
 || *Location:* || http://184.73.200.19/android/eclipse ||
