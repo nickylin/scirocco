@@ -75,4 +75,4 @@ Scirocco によるテストの実行方法です。Scirocco JUnit Test は実機
 = テスト報告書をプロジェクトメンバーと共有するには？ =
 テスト報告書をプロジェクトメンバーと共有したい場合は、scirocco TMSを使ってください。
 sciroccoTMSはテスト報告書をWeb上で共有するためのテスト管理システムです。
-[http://code.google.com/p/scirocco/w/edit/QuickStartSciroccoTMS QuickStartSciroccoTMS]
+[http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS_JP QuickStartSciroccoTMS]
