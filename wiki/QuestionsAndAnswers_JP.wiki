@@ -1,0 +1,13 @@
+#summary Common Robotium Questions & Answers.
+
+=== Q.solo.clickOnButton()メソッドの引数に、ボタン名を渡したときに、「(ボタン名) is not found!」エラーが発生する===
+A.ボタン名はstring.xmlで定義してある必要があります。例えば、solo.clickOnButton("登録")メソッドを呼ぶには、以下のようにxmlが定義されている必要があります。
+<br>
+string.xml
+ <string name="CreateButton">登録</string>
+<br>
+layout.xml
+ <Button
+   android:text="@string/CreateButton"
+   android:id="@+id/createbutton">
+ </Button>
