@@ -1,13 +1,13 @@
-#summary クイックスタート scirocco.
+#summary クイックスタート Scirocco.
 #labels QuickStart,scirocco,Japanese
 
 = クイックスタート scirocco=
 
-このガイドでは、sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
+このガイドでは、Sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
 <br>
 <br>
 
-= scirocco plugin のインストール=
+= Scirocco Plug-in のインストール=
 
 実際にEclipseにSciroccoを導入する手順は以下のようになります。
  # Eclipse を起動
