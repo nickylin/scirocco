@@ -43,4 +43,4 @@ At the end of the test, “scirocco” folder is created in (場所は？). Your
 
 = How to share your test reports? =
 QuickStartSciroccoTMS is a test management system that provides easy share test reports with your project member.
-[http://code.google.com/p/scirocco/w/edit/QuickStartSciroccoTMS QuickStartSciroccoTMS]
+[http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS QuickStartSciroccoTMS]
