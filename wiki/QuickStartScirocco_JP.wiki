@@ -11,14 +11,14 @@
 
 実際にEclipseにSciroccoを導入する手順は以下のようになります。
  # Eclipse を起動
- # メニューバーからヘルプタブを選択
- # Install New Software をクリック
- # Work with: 欄の右にある Add... ボタンをクリック
+ # メニューバーから`[ヘルプ]`を選択
+ # `[Install New Software]` をクリック
+ # Work with 欄の右にある `[Add...]` ボタンをクリック
  # それぞれ下のテーブルのように入力してOKボタンをクリック
- # Select Allを選び、Next> をクリック
- # リストにSciroccoFeatureが有る事を確認してNext> をクリック
+ # Select Allを選び、`[Next]` をクリック
+ # リストに`SciroccoFeature`が有る事を確認して`[Next]` をクリック
  # I accept the terms of the license agreement を選んで Finish を押す
- # Eclipseメニューの環境設定 > Scirocco で、Android SDK Locationを指定してOKをクリック
+ # Eclipseメニューの`[環境設定]` > `[Scirocco]` を選択し、Android SDK Locationを指定してOKをクリック
 <br>
 || *Name:* || Scirocco ||
 || *Location:* || http://184.73.200.19/android/eclipse ||
@@ -36,13 +36,13 @@ SciroccoはEclipse 3.6 (Helios) で動作確認をしています。
 
 == ファイルのインポート ==
  # Eclipseを開く
- # メニューバーからファイルタブを選択
- # importをクリック
- # Existing Project into Workspaceを選択してNext > をクリック
- # Select achieve file欄の右にあるBrowse... ボタンをクリック
+ # メニューバーから`[File]`を選択
+ # `[import]`をクリック
+ # `[Existing Project into Workspace]`を選択して`[Next]` をクリック
+ # Select achieve file欄の右にある`[Browse]` ボタンをクリック
  # `ExampleApplicationProject_v1.0.zip`も同様
 ==== 注意 ====
-Mac 環境の場合はDLした際にファイルが自動解凍されている場合が有ります。その場合は手順5,6において、Select achieve fileではなくSelect root directoryを選んで、対象のファイルををimportして下さい。
+Mac 環境の場合はDLした際にファイルが自動解凍されている場合が有ります。その場合は手順5,6において、Select achieve fileではなくSelect root directoryを選んで、対象のファイルを`[import]`して下さい。
 <br>
 
 == サンプルアプリの設定確認 ==
@@ -75,4 +75,5 @@ Scirocco によるテストの実行方法です。Scirocco JUnit Test は実機
 = テスト報告書をプロジェクトメンバーと共有する方法 =
 テスト報告書をプロジェクトメンバーと共有したい場合は、scirocco TMSを使ってください。
 sciroccoTMSはテスト報告書をWeb上で共有するためのテスト管理システムです。
+設定方法は下記のリンク先を参照して下さい。<br>
 [http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS_JP QuickStartSciroccoTMS]
