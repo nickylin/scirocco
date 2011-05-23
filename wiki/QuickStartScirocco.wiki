@@ -1,6 +1,5 @@
 #summary Quick Start scirocco.
 #labels QuickStart,scirocco,Featured
-#sidebar NameOfPage
 
 = Quick Start scirocco=
 
@@ -8,7 +7,7 @@ Way to use of scirocco is as below.
 <br>
 <br>
 = Installing the scirocco plugin =
-
+If Eclipse is not installed in your computer, access [http://www.eclipse.org/helios/] and install Eclipse 3.6(Helios) first.
  # Start Eclipse. (If Eclipse is not )
  # Click `[File]` tab from menu bar.
  # Click `[Install New Software]`.
@@ -17,8 +16,8 @@ Way to use of scirocco is as below.
  # Click 'Select All' and then go to `[Next]`.
  # Checking to ensure your list have `SciroccoFeature`, and then click `[Next]`.
  # Select 'I accept the terms of the license agreement' and go to  'Finish' .
- # Click `[Eclipse]` tab from menu bar, and then `[Settings]` > `[Scirocco]` 
- # Android SDK Locationを指定してOKをクリック
+ # Click `[Eclipse]` tab from menu bar, and then select`[Settings]` > `[Scirocco]`. 
+ # Set Android SDK Location and then Click '[OK]' button.
 <br>
 || *Name:* || Scirocco ||
 || *Location:* || http://184.73.200.19/android/eclipse ||
@@ -80,4 +79,3 @@ When test finished, Scirocco create 'scirocco' folder in ???????? directory. You
 QuickStartSciroccoTMS is a test management system that provides easy share test reports with your project member.<br>
 Please go to the below referenced web link for usage of Scirocco TMS. <br>
 [http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS QuickStartSciroccoTMS]
-
