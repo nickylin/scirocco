@@ -33,6 +33,9 @@ git clone git://github.com/wayneeseguin/rvm.git
 cd rvm/
 ./install
 vim ~/.bashrc
+  (.bashrcファイルの末尾に以下を記述)
+  # This loads RVM into a shell session.
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 source ~/.bashrc
 }}}
 ===ruby1.8.6 と rails2.3.5をインストール===
@@ -42,7 +45,10 @@ rvm use 1.8.6 --default
 rvm gemset create rails2
 rvm use 1.8.6@rails2 --default
 gem install rails -v2.3.5
-必要なライブラリをインストール
+}}}
+
+===必要なライブラリをインストール===
+{{{
 gem install sqlite3-ruby -v 1.2.5
 gem install zipruby
 gem install hpricot
