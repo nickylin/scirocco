@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  project: 
+  class_name: MyString
+  device: MyString
+  date: MyString
+  result: MyString
+  test_name: MyString
+  test_procedure: MyText
+  confirmation_contents: MyText
+  trace: MyText
+
+two:
+  project: 
+  class_name: MyString
+  device: MyString
+  date: MyString
+  result: MyString
+  test_name: MyString
+  test_procedure: MyText
+  confirmation_contents: MyText
+  trace: MyText
