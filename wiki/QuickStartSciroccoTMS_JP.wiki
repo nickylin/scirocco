@@ -2,23 +2,23 @@
 #labels QuickStart,sciroccoTMS,Japanese
 
 = Quick Start sciroccoTMS=
-SsciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです。
+SsciroccoTMSはRubyOnRailsで実装されたWebベースのテスト管理システムです.
 
-このガイドでは、SciroccoTMSを使ってSciroccoのテスト報告書をWeb上で共有する方法を説明します。
+このガイドでは、SciroccoTMSを使ってSciroccoのテスト報告書をWeb上で共有する方法を説明します.
 <br>
 <br>
 =必要な環境=
 ===OS===
-SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます。
+SciroccoTMSはたいていのUNIX, Linux, Mac, Windowsシステム等、Rubyが利用可能なシステムで実行できます.
 
 ===RubyおよびRuby on rails===
-SciroccoTMSで必要となるRubyとRailsのバージョンは以下の通りです。
-
+SciroccoTMSで必要となるRubyとRailsのバージョンは以下の通りです.
+<br>
 || *Ruby* || *Rails* ||
 || 1.8.6 || 2.3.5 ||
+
 === データベース ===
 sqlite 3
-<br>
 <br>
 = インストール =
 Mac OS XにSciroccoTMSをインストールする手順を説明します。
