@@ -33,6 +33,9 @@ git clone git://github.com/wayneeseguin/rvm.git
 cd rvm/
 ./install
 vim ~/.bashrc
+  (.bashrcファイルの末尾に以下を記述)
+  # This loads RVM into a shell session.
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 source ~/.bashrc
 }}}
 === install ruby1.8.6 and rails2.3.5===
