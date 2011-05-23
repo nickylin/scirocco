@@ -9,38 +9,75 @@ Way to use of scirocco is as below.
 <br>
 = Installing the scirocco plugin =
 
-If you are already familiar with installing Eclipse plugins, you can just use the update site URL below for your version of Eclipse.
-====Eclipse 3.6 (Helios)====
-<font color="green">http://184.73.200.19/android/eclipse</font> 
+ # Start Eclipse. (If Eclipse is not )
+ # Click `[File]` tab from menu bar.
+ # Click `[Install New Software]`.
+ # Click `[Add...]` button at the right of 'Work with' field.
+ # Enter 'Name' and 'Location' as table below.
+ # Click 'Select All' and then go to `[Next]`.
+ # Checking to ensure your list have `SciroccoFeature`, and then click `[Next]`.
+ # Select 'I accept the terms of the license agreement' and go to  'Finish' .
+ # Click `[Eclipse]` tab from menu bar, and then `[Settings]` > `[Scirocco]` 
+ # Android SDK Locationを指定してOKをクリック
 <br>
-<br>
-= Download Example Application project =
-In the Downloads section you will find `ExampleApplicationProject_v1.0.zip.`
-Then you import ExampleApplicationProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleApplicationProject_v1.0.zip.
+|| *Name:* || Scirocco ||
+|| *Location:* || http://184.73.200.19/android/eclipse ||
 
-Open an AndroidManufest.xml file of target application and make sure following permissions are set. It is necessary to capture screenshots.
+<br>
+<br>
+
+= Sample Application and Test Code =
+== Download sample application and test code ==
+ # Access [http://code.google.com/p/scirocco/downloads/list] by your web browser.
+ # Download the `ExampleApplicationProject_v1.0.zip`and  to your computer with a web browser and unzip the package.
+ # Download the `ExampleTestProject_v1.0.zip`, just do likewise.
+ # After unzip it move them to your 'workspace' folder.
+<br>
+
+== How to import ==
+ # Start Eclipse.
+ # Click `[File]` from menu bar.
+ # Click `[import]`.
+ # Select `[Existing Project into Workspace]`and then go`[Next]`.
+ # Click `[Browse]` button at the right of the 'Select achieve file' field.
+ #
+ # Import `ExampleApplicationProject_v1.0.zip`is the same way.
+== Prepare Sample Application ==
+Open an `AndroidManufest.xml` file of target application and make sure following permissions are set. It is necessary to capture screenshots.
 {{{
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 }}}
 
 <br>
 <br>
-= Download Example test project =
-In the Downloads section you will find ExampleTestProject_v1.0.zip which is an example test project created in Eclipse to test ExampleProject.
-
-Then you import ExampleTestProject_v1.0.zip by clicking on File --> Import --> Existing Project into workspace --> Select archive file --> ExampleTestProject_v1.0.zip.
-
+== Prepare Sample Test Code  ==
 Make sure your test project refers following jar files. It is necessary to perform test by scirocco.
- * robotium.jar
- * scirocco.jar
+ *robotium-solo-2.3-javadoc.jar
+ *robotium-solo-2.3.jar
+ *scirocco.jar
+<br>
+
+== Run Scirocco JUnit Test ==
+Scirocco JUnit Test is able to run on android devices or emulator on your computer.
 
 
-= Run Scirocco JUnit Test =
-Then you can run these test cases either on the emulator or on device. You right click the test project and select Run As --> Scirocco JUnit Test.
 
-At the end of the test, “scirocco” folder is created in (場所は？). Your test reports are straged in scirocco folder.
+ # Right click sample application project.
+ # Click `[Run As]` > `[Scirocco JUnit Test]` from menu and then Scirocco Unit Test will run.
+During the test, Scirocco work automatically.
+If Scirocco does not work, please return installing section and reinstall it.
 
+Scirocco automatically do several works such as below. 
+ * Running Test
+ * Taking Screenshot
+ * Making Test Report with result
+
+When test finished, Scirocco create 'scirocco' folder in ???????? directory. Your test report is in scirocco folder.
+<br>
+<br>
 
 = How to share your test reports? =
-QuickStartSciroccoTMS is a test management system that provides easy share test reports with your project member.
+QuickStartSciroccoTMS is a test management system that provides easy share test reports with your project member.<br>
+Please go to the below referenced web link for usage of Scirocco TMS. <br>
 [http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS QuickStartSciroccoTMS]
+
