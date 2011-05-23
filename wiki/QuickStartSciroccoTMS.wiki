@@ -59,19 +59,19 @@ cd scirocco_tms
 ruby script/server
 }}}
 
-1. Start WEBrick
-2. Then access http://localhost:3000/ by browser.
-3. If you can access successfully TOP PAGE of sciroccoTMS 
+ #Start WEBrick
+ #Then access http://localhost:3000/ by browser.
+ #If you can access successfully TOP PAGE of sciroccoTMS 
 
 
 ===SciroccoTMS URL setting===
-1. Start Eclipse
-2. Click Eclipse in menu tab
-3. Click Preferences
-4. Click scirocco 
-5. Enter http://localhost:3000 in sciorcco TMS URL field
-6. Click OK button
+ #Start Eclipse
+ #Click Eclipse in menu tab
+ #Click Preferences
+ #Click scirocco 
+ #Enter http://localhost:3000 in sciorcco TMS URL field
+ #Click OK button
 
 ===Finishing installation===
-1. access http://localhost:3000/ by browser
-2. If sciroccoTMS is running properly, project name which you tested is there.
+ #access http://localhost:3000/ by browser
+ #If sciroccoTMS is running properly, project name which you tested is there.
