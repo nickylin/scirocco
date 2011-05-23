@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang='ja'>
+  <head>
+    <title>Scirocco</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :all %>
+    <meta charset='UTF-8'>
+    <meta name="author" content="Erwin Aligam - styleshout.com" />
+    <meta name="description" content="Site Description Here" />
+  </head>
+  <body>
+
+    <!-- header starts-->
+    <div id="header-wrap"><div id="header" class="container_16">
+        <!--<p id="intro">A UI Test Automation Tool for Android.</p>-->
+        <% if @project != nil %>
+          <!--  <h4><font color="blue">Project：<%= @project.name %></font></h4> -->
+          <p id="project"><%= @project.name %></p>
+        <% end %>
+
+        <!-- navigation -->
+        <div  id="nav">
+          <ul>
+            <%# <li id="current"><a href="/">Project</a></li> %>
+            <li><a href="/">Report</a></li>
+            <!--<li><a href="config">Config</a></li>-->
+          </ul>
+        </div>
+
+        <!--<div id="header-image"></div>-->
+        <div id="title-image"></div>
+
+        <!-- header ends here -->
+    </div></div>
+
+    <!-- content starts -->
+    <div id="content-outer"><div id="content-wrapper" class="container_16">
+
+        <!-- main -->
+        <div id="main" class="grid_main">
+
+          <%= yield %>
+          <!-- main ends -->
+        </div>
+
+
+        <!-- contents end here -->
+    </div></div>
+
+    <!-- footer starts here -->
+    <div id="footer-wrapper" class="container_16">
+      <div id="footer-bottom">
+        <p class="bottom-left">
+        <strong>Scirocco v1.0.0</strong> Copyright &copy; 2011 <a href="http://www.sonix.asia/">Sonix Co., Ltd.</a> License is <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>
+        　<a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
+        </p>
+        </br>
+      </div>
+    </div>
+    <!-- footer ends here -->
+
+  </body>
+</html>
+

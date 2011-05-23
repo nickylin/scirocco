@@ -1,0 +1,12 @@
+<h1>画像ファイルのアップロード</h1>
+<%= form_tag 'upload_done' , :multipart =>true do %>
+  ファイルを選択してください：
+  <%= file_field_tag 'upload' %>
+  <%= text_field_tag :project, "p1", {:size=>"20"} %>
+  <%= text_field_tag :class_name, "class01", {:size=>"20"} %>
+  <%= text_field_tag :device, "device01", {:size=>"20"} %>
+  <%= text_field_tag :date, "20111243111111", {:size=>"20"} %>
+
+  <br>
+  <%=submit_tag "アップロード" %><br>
+<% end %>

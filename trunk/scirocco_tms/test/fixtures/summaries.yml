@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  project: 
+  class_name: MyString
+  device: MyString
+  date: MyString
+  pass: 1
+  fail: 1
+
+two:
+  project: 
+  class_name: MyString
+  device: MyString
+  date: MyString
+  pass: 1
+  fail: 1
