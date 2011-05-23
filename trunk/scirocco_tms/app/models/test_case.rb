@@ -86,6 +86,16 @@ class TestCase < ActiveRecord::Base
 #    p "device=#{device}"
 #    p "date=#{date}"
 
+
+    #sciroccoディレクトリを作成
+    scirocco_dir = "#{OUTPUT_DIR}"
+    unless File.exist?(scirocco_dir)
+      Dir::mkdir(scirocco_dir)
+      p "mkdir:" + scirocco_dir 
+      p "scirocco_dir_created!"
+    end
+
+
     #プロジェクトディレクトリを作成
     project_dir = "#{OUTPUT_DIR}#{project_name}"
     unless File.exist?(project_dir)
