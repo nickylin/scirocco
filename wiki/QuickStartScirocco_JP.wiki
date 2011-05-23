@@ -26,7 +26,7 @@
 `*2` もしSecurity Warningのダイアログが表示された場合はOKを選択してインストール作業を続行して下さい下さい. <br>
 `*3` もしSoftware Updatesのダイアログが表示された場合はRestart Nowを選択して、Eclipseを再起動して下さい.  <br>
 
-SciroccoはEclipse 3.6 (Helios) で動作確認をしています.
+
 == Sciroccoの設定 ==
  # Eclipseメニューの`[環境設定]` > `[Scirocco]` を選択し、Android SDK Locationを指定してOKをクリック
 Scirocco TMS URLの設定についてはSciroccoTMS導入時に行います.詳しくは[http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS_JP QuickStartSciroccoTMS_JP]を参照して下さい.
