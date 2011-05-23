@@ -51,11 +51,12 @@ gem install hpricot
 }}}
 ===install SciroccoTMS===
 {{{
-svn co TODO
+svn checkout http://scirocco.googlecode.com/svn/trunk/scirocco_tms scirocco_tms
 }}}
 ===CHECK===
 {{{
-ruby script/server webrick -e production
+cd scirocco_tms
+ruby script/server
 }}}
 
 1. Start WEBrick
