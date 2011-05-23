@@ -3,27 +3,34 @@
 
 = クイックスタート scirocco=
 
-このガイドでは、Sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します。
+このガイドでは、Sciroccoを使ってandroidアプリケーションのUIテストを自動化する方法を説明します.
 <br>
 <br>
 
 = Scirocco Plug-in のインストール=
 
-実際にEclipseにSciroccoを導入する手順は以下のようになります。
- # Eclipse を起動
+実際にEclipseにSciroccoを導入する手順は以下のようになります.
+ # Eclipse を起動 `*1`
  # メニューバーから`[ヘルプ]`を選択
  # `[Install New Software]` をクリック
  # Work with 欄の右にある `[Add...]` ボタンをクリック
  # それぞれ下のテーブルのように入力してOKボタンをクリック
  # Select Allを選び、`[Next]` をクリック
  # リストに`SciroccoFeature`が有る事を確認して`[Next]` をクリック
- # I accept the terms of the license agreement を選んで Finish を押す
+ # I accept the terms of the license agreement を選んで Finish を押すとインストールが開始
+
+== Sciroccoの設定 ==
  # Eclipseメニューの`[環境設定]` > `[Scirocco]` を選択し、Android SDK Locationを指定してOKをクリック
+Scirocco TMS URLの設定についてはSciroccoTMS導入時に行います.詳しくは[http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS_JP QuickStartSciroccoTMS_JP]を参照して下さい.
 <br>
 || *Name:* || Scirocco ||
 || *Location:* || http://184.73.200.19/android/eclipse ||
 
-SciroccoはEclipse 3.6 (Helios) で動作確認をしています。
+`*1` もしEclipseがまだインストールされていない場合、[http://www.eclipse.org/helios/]へアクセスし、 Eclipse 3.6(Helios) をインストールしてからSciroccoの導入作業を行って下さい.
+`*2` もしSecurity Warningのダイアログが表示された場合はOKを選択して下さい.
+`*3` もしSoftware Updatesのダイアログが表示された場合はRestart Nowを選択して、Eclipseを再起動して下さい. 
+
+SciroccoはEclipse 3.6 (Helios) で動作確認をしています.
 <br>
 <br>
 
