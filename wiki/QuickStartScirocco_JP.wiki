@@ -60,9 +60,9 @@ Mac 環境の場合はDLした際にファイルが自動解凍されている�
 
 == サンプルテストコードの設定確認 ==
 `ExampleTestProject`のlibフォルダ内に以下のjarファイルが有る事を確認して下さい。
- *robotium-solo-2.3-javadoc.jar
- *robotium-solo-2.3.jar
- *scirocco.jar
+ * `robotium-solo-2.3-javadoc.jar`
+ * `robotium-solo-2.3.jar`
+ * `scirocco.jar`
 `*`これらのファイルは`ExampleApplicationProject`には有りません。
 <br>
 
