@@ -28,7 +28,7 @@ SciroccoはEclipse 3.6 (Helios) で動作確認をしています。
 <br>
 
 = サンプルアプリを使った動作確認 =
-== `ExampleApplicationProject_v1.0.zip`と`ExampleTestProject_v1.0.zip`のダウンロード ==
+== サンプルアプリとサンプルテストコードのダウンロード ==
  # ブラウザから[http://code.google.com/p/scirocco/downloads/list]へアクセス
  # リストから`ExampleApplicationProject_v1.0.zip`をダウンロードしてworkspaceへ置く
  # `ExampleTestProject_v1.0.zip`も同様
@@ -45,13 +45,13 @@ SciroccoはEclipse 3.6 (Helios) で動作確認をしています。
 Mac 環境の場合はDLした際にファイルが自動解凍されている場合が有ります。その場合は手順5,6において、Select achieve fileではなくSelect root directoryを選んで、対象のファイルををimportして下さい。
 <br>
 
-== `ExampleApplicationProject`の設定確認 ==
+== サンプルアプリの設定確認 ==
 アプリケーションプロジェクトの`AndroidManifest.xml`を開き、以下のパーミッションが設定されている事を確認してください。この設定はテスト時にスクリーンショットを取得する場合に必要です。
 {{{
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 }}}
 
-== `ExampleTestProject`の設定確認 ==
+== サンプルテストコードの設定確認 ==
 `ExampleTestProject`のlibフォルダ内に以下のjarファイルが有る事を確認して下さい。
  *robotium-solo-2.3-javadoc.jar
  *robotium-solo-2.3.jar
@@ -64,7 +64,7 @@ Scirocco によるテストの実行方法です。Scirocco JUnit Test は実機
 
 実行方法は以下のようになります。
  # 対象のテストプロジェクトを右クリック
- # メニューの中から[Run As] > [Scirocco JUnit Test]
+ # メニューの中から`[Run As]` > `[Scirocco JUnit Test]`
 以上の手順だけでScirocco によるテストが開始します。
 テスト中は操作が自動で行われます。
 
@@ -72,7 +72,7 @@ Scirocco によるテストの実行方法です。Scirocco JUnit Test は実機
 <br>
 <br>
 
-= テスト報告書をプロジェクトメンバーと共有するには？ =
+= テスト報告書をプロジェクトメンバーと共有する方法 =
 テスト報告書をプロジェクトメンバーと共有したい場合は、scirocco TMSを使ってください。
 sciroccoTMSはテスト報告書をWeb上で共有するためのテスト管理システムです。
 [http://code.google.com/p/scirocco/wiki/QuickStartSciroccoTMS_JP QuickStartSciroccoTMS]
