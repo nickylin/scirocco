@@ -65,13 +65,13 @@ ruby script/server
 
 
 ===SciroccoTMS URL setting===
- #Start Eclipse
- #Click Eclipse in menu tab
- #Click Preferences
- #Click scirocco 
- #Enter http://localhost:3000 in sciorcco TMS URL field
- #Click OK button
+ # Start Eclipse
+ # Click Eclipse in menu tab
+ # Click Preferences
+ # Click scirocco 
+ # Enter http://localhost:3000 in sciorcco TMS URL field
+ # Click OK button
 
 ===Finishing installation===
- #access http://localhost:3000/ by browser
- #If sciroccoTMS is running properly, project name which you tested is there.
+ # access http://localhost:3000/ by browser
+ # If sciroccoTMS is running properly, project name which you tested is there.
