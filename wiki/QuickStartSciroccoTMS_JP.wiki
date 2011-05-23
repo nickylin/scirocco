@@ -49,10 +49,13 @@ gem install hpricot
 }}}
 ===SciroccoTMSをインストール===
 {{{
-svn co TODO
+svn checkout http://scirocco.googlecode.com/svn/trunk/scirocco_tms scirocco_tms
 }}}
 ===WEBrickのwebサーバを起動し、動作確認===
-ruby script/server webrick -e production
+{{{
+cd scirocco_tms
+ruby script/server
+}}}
 WEBrickが起動したら、ブラウザで http://localhost:3000/ を開いてください。SciroccoTMSのトップページが表示されるはずです。
 
 注意: Webrickは通常は開発時に使用するものであり、通常の運用には適していません。動作確認以外には使用しないでください。本番運用においてはPassenger (mod_rails) の利用を検討してください。
