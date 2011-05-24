@@ -1,0 +1,28 @@
+#summary Common Scirocco Questions & Answers.
+#labels Scirocco,FAQ
+== Common Questions ==
+=== Q. Which versions of Eclipse does Scirocco support? ===
+A. Scirocco officially supports Eclipse 3.6 (Helios). If your Eclipse version is not latest, we recommend you to update your eclipse. 
+
+=== Q. Which versions of Android does Scirocco support? ===
+A. Scirocco officially supports Android 1.6 and up.
+
+== Trouble ==
+=== Q. Why "(Name of button) is not found!" error occur?===
+A. Name of widgets which you want to test must be defined by string.xml file.
+e.g. Testing Create button
+
+<br>
+string.xml
+{{{
+ <string name="CreateButton">Create</string>
+}}}
+<br>
+layout.xml
+{{{
+ <Button
+   android:text="@string/CreateButton"
+   ・・・
+   ・・・>
+ </Button>
+}}}
