@@ -62,9 +62,9 @@ cd scirocco_tms
 ruby script/server
 }}}
 
- #Start WEBrick
- #Then access http://localhost:3000/ by browser.
- #If you can access successfully TOP PAGE of sciroccoTMS 
+ # Start WEBrick
+ # Then access http://localhost:3000/ by browser.
+ # If you can access successfully TOP PAGE of sciroccoTMS 
 
 
 ===SciroccoTMS URL setting===
