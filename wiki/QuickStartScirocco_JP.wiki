@@ -1,5 +1,5 @@
 #summary クイックスタート Scirocco.
-#labels QuickStart,scirocco,Japanese
+#labels QuickStart,scirocco,Japanese,Featured
 
 = クイックスタート scirocco=
 
