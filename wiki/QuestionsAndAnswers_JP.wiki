@@ -1,5 +1,5 @@
 #summary Common Scirocco Questions & Answers.
-#labels Scirocco,FAQ
+#labels Scirocco,FAQ,Japanese
 == よくある質問 ==
 === Q. SciroccoがサポートしているEclipseのversionは？ ===
 A. SciroccoはEclipse 3.6 (Helios)に対応しています。 もしお使いのPCに入っているEclipseが最新で無い場合はアップデートをお勧めします。(2011/05 現在)
