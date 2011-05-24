@@ -1,12 +1,12 @@
-#summary Quick Start scirocco.
+#summary Quick Start Scirocco.
 #labels QuickStart,scirocco,Featured
 
-= Quick Start scirocco=
+= Quick Start Scirocco=
 
-Way to use of scirocco is as below.
+Way to use of Scirocco is as below.
 <br>
 <br>
-= Installing the scirocco plugin =
+= Installing the Scirocco plugin =
 
  # Start Eclipse. `*1)`
  # Select `[Help]` tab from menu bar.
