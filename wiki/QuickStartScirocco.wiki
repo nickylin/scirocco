@@ -55,9 +55,9 @@ Open an `AndroidManufest.xml` file of target application and make sure following
 <br>
 == Prepare Sample Test Code  ==
 Make sure your test project refers following jar files. It is necessary to perform test by scirocco.
- *robotium-solo-2.3-javadoc.jar
- *robotium-solo-2.3.jar
- *scirocco.jar
+ * robotium-solo-2.3-javadoc.jar
+ * robotium-solo-2.3.jar
+ * scirocco.jar
 <br>
 
 == Run Scirocco JUnit Test ==
