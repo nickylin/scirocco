@@ -1,5 +1,5 @@
 #summary Quick Start SciroccoTMS.
-#labels QuickStart,sciroccoTMS
+#labels QuickStart,sciroccoTMS,Featured
 
 = Quick Start SciroccoTMS=
 Scirocco is a web-based test management system which is made by RubyOnRails.
