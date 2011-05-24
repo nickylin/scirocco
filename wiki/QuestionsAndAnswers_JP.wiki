@@ -1,4 +1,11 @@
-#summary Common Robotium Questions & Answers.
+#summary Common Scirocco Questions & Answers.
+#labels Scirocco,FAQ
+== よくある質問 ==
+=== Q. SciroccoがサポートしているEclipseのversionは？ ===
+A. SciroccoはEclipse 3.6 (Helios)に対応しています。 もしお使いのPCに入っているEclipseが最新で無い場合はアップデートをお勧めします。(2011/05 現在)
+
+=== Q. SciroccoがサポートしているAndroidのversionは？ ===
+A. SciroccoはAndroid 1.6以降の機種に対応しています。
 
 === Q.solo.clickOnButton()メソッドの引数に、ボタン名を渡したときに、「(ボタン名) is not found!」エラーが発生する===
 A.ボタン名はstring.xmlで定義してある必要があります。例えば、登録ボタンをタップするメソッド「solo.clickOnButton("登録");」メソッドを呼ぶには、以下のようにxmlが定義されている必要があります。
