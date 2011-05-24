@@ -33,7 +33,7 @@ git clone git://github.com/wayneeseguin/rvm.git
 cd rvm/
 ./install
 vim ~/.bashrc
-  (.bashrcファイルの末尾に以下を記述)
+  (add following messages at the end of .bashrc file
   # This loads RVM into a shell session.
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 source ~/.bashrc
@@ -69,9 +69,9 @@ ruby script/server
 
 ===SciroccoTMS URL setting===
  # Start Eclipse
- # Click Eclipse in menu tab
- # Click Preferences
- # Click scirocco 
+ # Select `[Eclipse]` from menu bar
+ # Click Preferences from pull-down menu
+ # Click scirocco
  # Enter http://localhost:3000 in sciorcco TMS URL field
  # Click OK button
 
