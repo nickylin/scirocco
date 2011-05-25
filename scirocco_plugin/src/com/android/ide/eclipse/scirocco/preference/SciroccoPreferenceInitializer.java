@@ -9,7 +9,7 @@ import scirocco.Activator;
 
 public class SciroccoPreferenceInitializer extends AbstractPreferenceInitializer {
 
-	public static String SCIROCCO_TMS_URL = "SCIROCCO_TMS_URL";
+	public static String SCIROCCO_TMS_URL = "SCIROCCO_SERVER_URL";
 	public static String ANDROID_SDK_LOCATION = "ANDROID_SDK_LOCATION";
 	@Override
 	public void initializeDefaultPreferences() {

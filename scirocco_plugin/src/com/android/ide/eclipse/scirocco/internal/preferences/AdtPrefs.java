@@ -120,7 +120,14 @@ public final class AdtPrefs extends AbstractPreferenceInitializer {
 
         if (property == null || PREFS_SDK_DIR.equals(property)) {
             mOsSdkLocation = mStore.getString(PREFS_SDK_DIR);
-            mOsSdkLocation = mStore.getString(SciroccoPreferenceInitializer.ANDROID_SDK_LOCATION); //sciroccoÇÃpreferencesÇ©ÇÁSDKÇÃÉpÉXÇéÊìæ
+            mOsSdkLocation = mStore.getString(SciroccoPreferenceInitializer.ANDROID_SDK_LOCATION);
+        	//TODO SdkLocationÇâΩÇÁÇ©ÇÃï˚ñ@Ç≈éÛÇØìnÇ∑ÇÊÇ§Ç…èCê≥Ç∑ÇÈ
+//			String[] adbLocationAry = AdtPlugin.getOsAbsoluteAdb().split("\\.");
+//			String className = classNameAry[classNameAry.length - 1];
+            
+            //TODO
+//            mOsSdkLocation = "/Users/sonixasia/android-sdk-mac_r10";
+//            mOsSdkLocation = ;
 
             // Make it possible to override the SDK path using an environment variable.
             // The value will only be used if it matches an existing directory.

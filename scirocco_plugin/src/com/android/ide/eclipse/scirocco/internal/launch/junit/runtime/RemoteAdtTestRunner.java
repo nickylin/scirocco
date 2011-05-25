@@ -759,7 +759,7 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 						+ mLaunchInfo.getDevice().getSerialNumber() + " pull "
 						+ getDeviceSDCardDir(idx) + " "
 						+ screenShotFolder.getLocation();
-				System.out.println("pullCmd = " + pullCmd);
+				AdtPlugin.printToConsole(mLaunchInfo.getProject(),"pullCmd = " + pullCmd);
 				AdtPlugin.execCommand(mLaunchInfo.getProject().getName(),
 						pullCmd);
 			}

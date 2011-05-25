@@ -3,7 +3,6 @@ package com.android.ide.eclipse.scirocco.preference;
 import org.eclipse.jface.preference.DirectoryFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.preference.PreferenceStore;
 import org.eclipse.jface.preference.StringFieldEditor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
@@ -27,24 +26,22 @@ public class SciroccoPreferencePage2 extends FieldEditorPreferencePage implement
 				SciroccoPreferenceInitializer.ANDROID_SDK_LOCATION,"Android SDK Location:",getFieldEditorParent()));
 		
 		addField(new StringFieldEditor(
-				SciroccoPreferenceInitializer.SCIROCCO_TMS_URL,"Scirocco_TMS URL:",getFieldEditorParent()));
+				SciroccoPreferenceInitializer.SCIROCCO_TMS_URL,"scirocco_TMS URL:",getFieldEditorParent()));
 	}
 
 	@Override
 	public void init(IWorkbench workbench) {
 		// TODO Auto-generated method stub
-		
 	}
 	
 	@Override
 	public boolean performOk() {
-		super.performOk(); //Ç±ÇÍÇ≈thisÉNÉâÉXÇ…ç≈êVÇÃê›íËÇ™îΩâfÇ≥ÇÍÇÈ
-		IPreferenceStore store = this.getPreferenceStore();
-		String sdk = store.getString(SciroccoPreferenceInitializer.ANDROID_SDK_LOCATION);
-//		AdtPrefs.init(this.getPreferenceStore());
-		AdtPrefs.getPrefs().loadValues(null /*event*/);
-		return super.performOk();
+	    super.performOk();
+	    IPreferenceStore store = this.getPreferenceStore();
+	    String sdk = store.getString(SciroccoPreferenceInitializer.ANDROID_SDK_LOCATION);
+//	    AdtPrefs.init(this.getPreferenceStore());
+	    AdtPrefs.getPrefs().loadValues(null /*event*/);
+	    return super.performOk();
 	}
-
 
 }
