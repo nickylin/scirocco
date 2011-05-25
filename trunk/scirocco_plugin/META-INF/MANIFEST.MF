@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Scirocco
 Bundle-SymbolicName: com.android.ide.eclipse.scirocco;singleton:=true
-Bundle-Version: 10.0.1.v20110523
+Bundle-Version: 10.0.2.v20110524
 Bundle-Activator: com.android.ide.eclipse.scirocco.AdtPlugin
 Require-Bundle: com.android.ide.eclipse.ddms,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.debug.core,
  org.eclipse.debug.ui,
- org.eclipse.jdt,
+ org.eclipse.jdt;resolution:=optional,
  org.eclipse.ant.core,
  org.eclipse.jdt.core,
  org.eclipse.jdt.ui,

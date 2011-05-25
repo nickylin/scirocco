@@ -129,7 +129,7 @@ import com.android.resources.ResourceFolderType;
 import com.android.sdklib.IAndroidTarget;
 import com.android.sdklib.SdkConstants;
 import com.android.sdkstats.SdkStatsService;
-import com.sun.tools.internal.xjc.generator.bean.DualObjectFactoryGenerator;
+//import com.sun.tools.internal.xjc.generator.bean.DualObjectFactoryGenerator;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -1899,37 +1899,107 @@ public class AdtPlugin extends AbstractUIPlugin implements ILogger {
             }
         }
     }
-    
-	public static void execCommand(String projectName ,String command) {
-		String comm[] = { "bash", "-c", command };
-
+    /**
+     * 外部コマンドを実行します。
+     * またリタンーン値で、標準出力、エラー出力 、リターンコードを取得します。
+     * 例：
+     *     execCommand("notepad.exe");
+     * 
+     * @see execCommand(String[] cmds)
+     *    ※実行するコマンドに引数（パラメータ）がある場合は、
+     *    以下を使用してください。
+     * @param cmd 実行するコマンド
+     * @return 
+     * @return コマンド実行結果情報を保持するString配列
+     *    配列[0] ⇒ 標準出力 
+     *    配列[1] ⇒ エラー出力 
+     *    配列[2] ⇒ リターンコード
+     * @throws IOException 入出力エラーが発生した場合
+     */
+    public static void execCommand(String projectName,String cmd) {
+        String result;
 		try {
-			Process process = Runtime.getRuntime().exec(comm);
-			InputStream stream = process.getInputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					stream));
-			// shell標準出力
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				AdtPlugin.printToConsole(projectName, line);
-			}
-			br.close();
-			stream.close();
-
-			// shellエラー出力
-			InputStream es = process.getErrorStream();
-			br = new BufferedReader(new InputStreamReader(es));
-			while ((line = br.readLine()) != null) {
-				AdtPlugin.printErrorToConsole(projectName,
-						line);
-			}
-			br.close();
-			stream.close();
+			//result = execCommand(new String[] { cmd });
+			result = execCommand(cmd.split(" "));
+	        AdtPlugin.printToConsole(projectName, result);
+			//AdtPlugin.printErrorToConsole(projectName,result[1]);
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-	}
-	
+
+        
+    }
+    
+    /**
+     * 外部コマンドを引数（パラメータ）を指定して実行します。
+     * またリタンーン値で、標準出力、エラー出力 、リターンコードを取得します。
+     * 例：
+     *     execCommand(new String[]{"notepad.exe","C:\test.txt"});
+     * 
+     * Process.waitFor()を実行していますので、外部コマンドの実行が
+     * 終了するまでこのメソッドは待機します。
+     * 
+     * @see execCommand(String cmd)
+     *    ※実行するコマンドに引数がない場合は簡易的にこちらを
+     *      使用してください。
+     * @param cmds 実行するコマンドと引数を含む配列
+     * @return コマンド実行結果情報を保持するString配列
+     *    配列[0] ⇒ 標準出力 
+     *    配列[1] ⇒ エラー出力 
+     *    配列[2] ⇒ リターンコード
+     * @throws IOException 入出力エラーが発生した場合
+     */
+    public static String execCommand(String[] cmds) throws IOException,
+                                                        InterruptedException {
+        ProcessBuilder b = new ProcessBuilder(cmds);
+        //標準エラー出力をマージして出力する
+        b.redirectErrorStream(true);
+        Process p = b.start();
+        BufferedReader reader = new BufferedReader(
+              new InputStreamReader(p.getInputStream()));
+        StringBuffer ret = new StringBuffer();
+        String line = null;
+        //標準エラー出力が標準出力にマージして出力されるので、標準出力だけ読み出せばいい
+        while ((line = reader.readLine()) != null) {
+           ret.append(line + "\n");
+        }
+        return ret.toString();
+     
+    }
+//	public static void execCommand(String projectName ,String command) {
+//		
+//		
+//		String comm[] = { "bash", "-c", command };
+//
+//		try {
+//			Process process = Runtime.getRuntime().exec(comm);
+//			InputStream stream = process.getInputStream();
+//			BufferedReader br = new BufferedReader(new InputStreamReader(
+//					stream));
+//			// shell標準出力
+//			String line = null;
+//			while ((line = br.readLine()) != null) {
+//				AdtPlugin.printToConsole(projectName, line);
+//			}
+//			br.close();
+//			stream.close();
+//
+//			// shellエラー出力
+//			InputStream es = process.getErrorStream();
+//			br = new BufferedReader(new InputStreamReader(es));
+//			while ((line = br.readLine()) != null) {
+//				AdtPlugin.printErrorToConsole(projectName,
+//						line);
+//			}
+//			br.close();
+//			stream.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//	
 	
     //scirocco
     public static void uninstallPackage(IDevice device,String packageName) {

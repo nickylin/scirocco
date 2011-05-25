@@ -275,6 +275,42 @@ class AndroidJUnitLaunchAction implements IAndroidLaunchAction {
 			}
 		}
 			
+	private static final String IMAGES_DIRECTORY = "images/";
+	private static final String IMAGE_SCIROCCO_LOGO = "scirocco_logo_small.png";
+	private static final String IMAGE_BG = "bg.gif";
+	/**
+	 * Adds Image files to the project.
+	 * 
+	 * @param project
+	 *            The Java Project to update.
+	 * @param monitor
+	 *            An existing monitor.
+	 * @throws CoreException
+	 *             if the method fails to update the project.
+	 */
+	private void addImages() throws CoreException {
+		IProject project = mJUnitInfo.getProject();
+		IFolder sciroccoTestResultFolder = project.getFolder(new Path(SCIROCCO_TEST_RESULT_FOLDER));
+		IFolder imagesFolder = sciroccoTestResultFolder.getFolder(new Path(IMAGES_DIRECTORY));
+		if (!imagesFolder.exists()) {
+			// imagesディレクトリを作成
+			imagesFolder.create(false, true, null);
+		}
+
+		// do all 4 css files.
+		IFile file;
+		file = imagesFolder.getFile(IMAGE_BG);
+		if (!file.exists()) {
+			addFile(file, AdtPlugin.readEmbeddedFile(IMAGES_DIRECTORY + IMAGE_BG));
+		}
+
+		file = imagesFolder.getFile(IMAGE_SCIROCCO_LOGO);
+		if (!file.exists()) {
+			addFile(file, AdtPlugin.readEmbeddedFile(IMAGES_DIRECTORY + IMAGE_SCIROCCO_LOGO));
+		}
+	}
+	
+	
 		private static final String CSS_960 = "960.css";
 		private static final String CSS_KEEP_IT_SIMPLE = "KeepItSimple.css";
 		private static final String CSS_RESET = "reset.css";
@@ -355,6 +391,7 @@ class AndroidJUnitLaunchAction implements IAndroidLaunchAction {
             try {
 				createSciroccoDir();
 				addCSS();
+				addImages();
 				//TODO addImage
 			} catch (CoreException e) {
 				e.printStackTrace();

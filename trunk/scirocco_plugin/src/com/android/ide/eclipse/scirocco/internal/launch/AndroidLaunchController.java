@@ -46,7 +46,6 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
 import com.android.ddmlib.AdbCommandRejectedException;
@@ -314,6 +313,7 @@ public final class AndroidLaunchController implements IDebugBridgeChangeListener
         	Sdk.loadSdk(AdtPrefs.getPrefs().getOsSdkFolder());
         	currentSdk = Sdk.getCurrent();
         }
+        //yamada ‚±‚±‚ÅNUllPOINTER
         AvdManager avdManager = currentSdk.getAvdManager();
 
         // reload the AVDs to make sure we are up to date

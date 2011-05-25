@@ -66,14 +66,16 @@ public class AndroidJUnitLaunchShortcut extends JUnitLaunchShortcut {
     protected ILaunchConfigurationWorkingCopy createLaunchConfiguration(IJavaElement element)
             throws CoreException {
     	
-    	String sdkLocation = AdtPrefs.getPrefs().getOsSdkFolder();
-    	if(sdkLocation ==null || "".equals(sdkLocation)){
-    		MessageDialog.openInformation(
-                AdtPlugin.getDisplay().getActiveShell(),
-                "Scirocco Launch Error",  // title
-                "Please Set 'Android SDK Location' by Preferences > Scirocco");
-    		return null;
-    	}
+        String sdkLocation = AdtPrefs.getPrefs().getOsSdkFolder();
+        if(sdkLocation ==null || "".equals(sdkLocation)){
+          MessageDialog.openInformation(
+                  AdtPlugin.getDisplay().getActiveShell(),
+                  "Scirocco Launch Error",  // title
+                  "Please Set 'Android SDK Location' by Preferences > Scirocco");
+          return null;
+        }
+
+    	
     	
         ILaunchConfigurationWorkingCopy config = super.createLaunchConfiguration(element);
         // just get first valid instrumentation runner
