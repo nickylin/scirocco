@@ -7,6 +7,28 @@ A. SciroccoはEclipse 3.6 (Helios)に対応しています。 もしお使いの
 === Q. SciroccoがサポートしているAndroidのversionは？ ===
 A. SciroccoはAndroid 1.6以降の機種に対応しています。
 
+=== Q. Sciroccoを使用する際にかかる費用は？ ===
+A. Sciroccoはオープンソースソフトウェア(Apatch 2.0)ですので無料でご利用頂けます。
+
+=== Q. テストコードはどのように記述するのですか？ ===
+A. テストコードの書き方につきましては最新の[http://code.google.com/p/robotium/downloads/list robotium-solo-javedoc] ファイルを参照して下さい。
+
+
+=== 二つ以上のアプリケーションにまたがるテストは実行出来ますか？Is it possible to write a test case that spans over 2 applications? ===
+A. 出来ません。Robotium側では以下のように説明されています<br>
+(原文)<br>
+No, that is not possible. In the AndroidManifest.xml you state which target application you want to test. An example of what it can look like:<br>
+<instrumentation android:targetPackage="com.example.android.notepad" android:name="android.test.InstrumentationTestRunner" /><br>
+That means that the test project is locked to the targetPackage. Going outside of that target package is not allowed by the Android platform. Therefore you will need 2 test projects, one for each application.
+(訳文)<br>
+出来ません。AndroidManifest.xmlにテストをしたいアプリケーションを以下のように記述する様になっているからです。<br>
+<instrumentation android:targetPackage="com.example.android.notepad" android:name="android.test.InstrumentationTestRunner" /><br>
+テストプロジェクトは一つのターゲットパッケージを指定する構造になっており、その外側(別のパッケージ)へのアクセスは許可されないという事です。そのためアプリケーションの数だけテストプロジェクトを作成する必要があります。
+
+==操作・トラブル==
+=== Q. ？ ===
+A. テストコードの書き方につきましては最新の[http://code.google.com/p/robotium/downloads/list robotium-solo-javedoc] ファイルを参照して下さい。
+
 === Q.solo.clickOnButton()メソッドの引数に、ボタン名を渡したときに、「(ボタン名) is not found!」エラーが発生する===
 A.ボタン名はstring.xmlで定義してある必要があります。例えば、登録ボタンをタップするメソッド「solo.clickOnButton("登録");」メソッドを呼ぶには、以下のようにxmlが定義されている必要があります。
 <br>
