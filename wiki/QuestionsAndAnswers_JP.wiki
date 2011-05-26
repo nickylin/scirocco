@@ -32,6 +32,10 @@ That means that the test project is locked to the targetPackage. Going outside o
 }}}
 テストプロジェクトは一つのターゲットパッケージを指定する構造になっており、その外側(別のパッケージ)へのアクセスは許可されないという事です。そのためアプリケーションの数だけテストプロジェクトを作成する必要があります。 <br>
 
+=== Q. apkファイルだけでテストの実行は可能ですか？ ===
+A. 出来ます。やり方につきましては、以下のリンクを参照して下さい。
+[http://code.google.com/p/robotium/wiki/RobotiumForAPKFiles apkファイルのみでテストする方法(英語)]
+
 ==操作・トラブル==
 === Q.solo.clickOnButton()メソッドの引数に、ボタン名を渡したときに、「(ボタン名) is not found!」エラーが発生する===
 A.ボタン名はstring.xmlで定義してある必要があります。例えば、登録ボタンをタップするメソッド「solo.clickOnButton("登録");」メソッドを呼ぶには、以下のようにxmlが定義されている必要があります。
