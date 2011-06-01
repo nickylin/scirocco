@@ -22,7 +22,7 @@
     
         <!-- header starts-->
     <div id="header-wrap"><div id="header" class="container_16">
-          <p id="project">ActibookTest</p>
+          <p id="project"></p>
         <!-- navigation -->
         <div  id="nav">
           <ul>
