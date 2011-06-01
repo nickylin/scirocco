@@ -36,6 +36,11 @@ That means that the test project is locked to the targetPackage. Going outside o
 A. 出来ます。やり方につきましては、以下のリンクを参照して下さい。
 [http://code.google.com/p/robotium/wiki/RobotiumForAPKFiles apkファイルのみでテストする方法(英語)]
 
+=== Q. プリインストールアプリのテストは出来ますか？ ===
+A. 可能ですが、端末のルートを取る必要があります。*しかし、ルート化及びルート権限を利用した操作によって端末が起動しなくなる等の不具合が発生する事があり、また保証の対象外となりますのでメーカーのサポートも受けられなくなります。実行される場合は自己責任でお願いします*
+
+[http://code.google.com/p/robotium/wiki/RobotiumForPreInstalledApps プリインストールアプリのテスト方法(英語)]
+
 ==操作・トラブル==
 === Q.solo.clickOnButton()メソッドの引数に、ボタン名を渡したときに、「(ボタン名) is not found!」エラーが発生する===
 A.ボタン名はstring.xmlで定義してある必要があります。例えば、登録ボタンをタップするメソッド「solo.clickOnButton("登録");」メソッドを呼ぶには、以下のようにxmlが定義されている必要があります。
