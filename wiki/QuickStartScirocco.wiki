@@ -75,7 +75,7 @@ Scirocco automatically do several works such as below.
  * Taking Screenshot
  * Making Test Report with result
 
-When test finished, Scirocco create 'scirocco' folder in ???????? directory. Your test report is in scirocco folder.
+When test finished, Scirocco create 'scirocco' folder in your test project. Your test report is stored in scirocco folder.
 <br>
 <br>
 
