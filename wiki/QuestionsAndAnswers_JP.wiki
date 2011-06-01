@@ -11,7 +11,7 @@ A. SciroccoはEclipse 3.6 (Helios)に対応しています。 もしお使いの
 A. SciroccoはAndroid 1.6以降の機種に対応しています。
 
 === Q. Sciroccoを使用する際にかかる費用はどのくらいですか？ ===
-A. Sciroccoはオープンソースソフトウェア(Apatch 2.0)ですので無料でご利用頂けます。
+A. Sciroccoはオープンソースソフトウェア(Apache 2.0)ですので無料でご利用頂けます。
 
 === Q. テストコードはどのように記述するのですか？ ===
 A. テストコードの書き方につきましては最新の[http://code.google.com/p/robotium/downloads/list robotium-solo-javedoc] ファイルを参照して下さい。
