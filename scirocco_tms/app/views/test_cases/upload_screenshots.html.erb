@@ -1,7 +1,0 @@
-<h1>画像ファイルのアップロード</h1>
-<%= form_tag 'upload_screenshots_done' , :multipart =>true do %>
-  ファイルを選択してください：
-  <%= file_field_tag 'upload' %>
-  <br>
-  <%=submit_tag "アップロード" %><br>
-<% end %>
