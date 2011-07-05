@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
   protected
   def basic_authentication
     authenticate_or_request_with_http_basic do |user, pass|
-      [user, pass] == ['sonixasia', 'sonixtech']
     end
   end
 end
