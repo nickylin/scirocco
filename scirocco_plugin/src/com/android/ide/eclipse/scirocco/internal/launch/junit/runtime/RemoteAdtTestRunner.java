@@ -16,10 +16,14 @@
 
 package com.android.ide.eclipse.scirocco.internal.launch.junit.runtime;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,10 +33,8 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.jdt.core.IAnnotation;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.IJavaProject;
@@ -55,7 +57,6 @@ import com.android.ddmlib.TimeoutException;
 import com.android.ddmlib.testrunner.ITestRunListener;
 import com.android.ddmlib.testrunner.RemoteAndroidTestRunner;
 import com.android.ddmlib.testrunner.TestIdentifier;
-import com.android.ide.eclipse.scirocco.AdtConstants;
 import com.android.ide.eclipse.scirocco.AdtPlugin;
 import com.android.ide.eclipse.scirocco.internal.launch.LaunchMessages;
 import com.android.ide.eclipse.scirocco.preference.SciroccoPreferenceInitializer;
@@ -80,8 +81,8 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 	private AndroidJUnitLaunchInfo mLaunchInfo;
 	private TestExecution mExecution;
 	private StringBuffer mSciroccoTestResult = new StringBuffer();
-	// Scirocco Define
 	private boolean mIsTestFailed = false;
+	private static final String EVIDENCE_FOLDER_NAME = "evidence";
 	private static final String PARAM_SCIROCCO_TEST_RESULT = "$SCIROCCO_TEST_RESULT";
 	private static final String PARAM_SCIROCCO_PROJECT_NAME = "$PROJECT_NAME";
 	private static final String PARAM_SCIROCCO_DEVICE = "$DEVICE";
@@ -336,17 +337,63 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 		}
 		
 
+		/**
+		 * テスト結果を格納するHTMLテーブルにスクリーンショットを追加する
+		 * 
+		 * @param test
+		 */
+		public void appendMemoryInfo(TestIdentifier test) {
+			mSciroccoTestResult.append("<td class='col'>\n");
+			int MAX_NUMBER_OF_MEMORY_INFO = 50;
+			try {
+				for (int sequenceNo = 0; sequenceNo <= MAX_NUMBER_OF_MEMORY_INFO; sequenceNo++) {
+					String memoryInfoFileName = getMemoryInfoFileName(test,sequenceNo);
+					String absoluteMemoryInfoPath = getScreenShotFolder().getRawLocation() + "/" + memoryInfoFileName;
+					File file = new File(absoluteMemoryInfoPath);
+					if (file.exists() == false) {
+						break;
+					}
+					BufferedReader br = new BufferedReader(
+											new InputStreamReader(
+												new FileInputStream(absoluteMemoryInfoPath),
+												"UTF-8"));
+		            String line;
+		            while ((line = br.readLine()) != null) {
+		            	mSciroccoTestResult.append(line);
+		            }
+	            	mSciroccoTestResult.append("<br>");
+		            br.close();
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			mSciroccoTestResult.append("</td>\n");
+		}
+		
+		private static final String MEMORY_INFO_FILENAME= "memory_info";
+		private String getMemoryInfoFileName(TestIdentifier test,int sequenceNo) {
+			return MEMORY_INFO_FILENAME + "_" +
+					 test.getTestName() + "_"
+					+ Integer.toString(sequenceNo) + ".txt";
+		}
+		
+		/**
+		 * テスト結果を格納するHTMLテーブルにスクリーンショットを追加する
+		 * @param test
+		 */
 		public void appendScreenShot(TestIdentifier test){
-			mSciroccoTestResult.append("<td><table id='screenshot'><tr>\n");
+			mSciroccoTestResult.append("<td class='col'><table id='screenshot'><tr>\n");
 			// TODO　この数を可変にする方法を考える
-			getScreenShotFromDevicesSDCard();
-			int numberOfscreenShots = 50;
-			for (int screenShotSequenceNo = 0; screenShotSequenceNo <= numberOfscreenShots; screenShotSequenceNo++) {
+			// スクリーンショットの取得情報をSDカードに保存しておくか？
+			int MAX_NUMBER_OF_SCREEN_SHOTS = 50;
+			for (int screenShotSequenceNo = 0; screenShotSequenceNo <= MAX_NUMBER_OF_SCREEN_SHOTS; screenShotSequenceNo++) {
 				String screenShotName =
 					 test.getTestName() + "_"
 					+ Integer.toString(screenShotSequenceNo) + ".jpg";
 
-				String relativeScreenShotPath = "screenshot/" + screenShotName;
+				String relativeScreenShotPath = EVIDENCE_FOLDER_NAME + "/" + screenShotName;
 				String AbsoluteScreenShotPath = getScreenShotFolder()
 						.getRawLocation() + "/" + screenShotName;
 
@@ -370,6 +417,8 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 			
 			if (mIsTestFailed == false) {
 				writeSciroccoTestResult(test, null);
+				getTestEvidenceFromDevicesSDCard();
+				appendMemoryInfo(test);
 				appendScreenShot(test);
 				mTestPassCount++;
 			}
@@ -445,7 +494,7 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 
 				// スクリーンショットディレクトリを作成
 				IFolder screenShotFolder = testTimeFolder
-						.getFolder("screenshot");
+						.getFolder(EVIDENCE_FOLDER_NAME);
 				if (!screenShotFolder.exists()) {
 					screenShotFolder.create(false, true, null);
 				}
@@ -511,22 +560,22 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 			}
 			
 			
-			mSciroccoTestResult.append("<tr>");
+			mSciroccoTestResult.append("<tr class='row'>");
 			if (mIsTestFailed) {
 				mSciroccoTestResult
-						.append("<td><font color='red'>Fail</font></td>\n");
+						.append("<td class='col'><font color='red'>Fail</font></td>\n");
 			} else {
 				mSciroccoTestResult
-						.append("<td><font color='green'>Pass</font></td>\n");
+						.append("<td class='col'><font color='green'>Pass</font></td>\n");
 			}
-			mSciroccoTestResult.append("<td>" + test.getTestName() + "</td>\n");
-			mSciroccoTestResult.append("<td>" + testProcedure + "</td>\n");
-			mSciroccoTestResult.append("<td>" + confirmationContents
+			mSciroccoTestResult.append("<td class='col'>" + test.getTestName() + "</td>\n");
+			mSciroccoTestResult.append("<td class='col'>" + testProcedure + "</td>\n");
+			mSciroccoTestResult.append("<td class='col'>" + confirmationContents
 					+ "</td>\n");
 			if (trace == null) {
 				trace = "";
 			}
-			mSciroccoTestResult.append("<td>" + trace + "</td>\n");
+			mSciroccoTestResult.append("<td class='col'>" + trace + "</td>\n");
 		}
 
 		/*
@@ -569,7 +618,7 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 			parameters.put(PARAM_DATE,AdtPlugin.getTestTime());
 			
 			try {
-				//送信ファイルをzip化
+				// 送信ファイルをzip化
 				ZipUtil.zip(srcPath,destPath);
 				HTTPUtil.postUploadFile(upload_cgi_url,destPath,parameters);
 			} catch (IOException e) {
@@ -610,7 +659,6 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 					"<scirocco>testRunStarted</scirocco>");
 
 			// テスト実行前にSDカードのスクリーンショットディレクトリを削除
-			// execCommand(AdtPlugin.getOsAbsoluteAdb()
 			// + " -s " + mLaunchInfo.getDevice().getSerialNumber()
 			// + " shell "
 			// + " rm -r /mnt/sdcard/scirocco");
@@ -656,6 +704,7 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 			parameters.put(PARAM_SCIROCCO_TEST_FAIL_COUNT,
 					Integer.toString(mTestFailCount));
 			parameters.put(PARAM_SCIROCCO_TEST_RESULT,
+					
 					mSciroccoTestResult.toString());
 
 			IFolder testTimeFolder = getTestTimeFolder();
@@ -751,10 +800,10 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 			}
 		}
 		
-		private void getScreenShotFromDevicesSDCard() {
+		private void getTestEvidenceFromDevicesSDCard() {
 			IFolder screenShotFolder = getScreenShotFolder();
 			for (int idx = 0; idx <= 1; idx++) {
-				// 端末のSDカードに保存されたスクリーンショットをテストプロジェクト内にコピー
+				// 端末のSDカードに保存された証跡(スクリーンショットとメモリ情報)をテストプロジェクト内にコピー
 				String pullCmd = AdtPlugin.getOsAbsoluteAdb() + " -s "
 						+ mLaunchInfo.getDevice().getSerialNumber() + " pull "
 						+ getDeviceSDCardDir(idx) + " "
@@ -810,3 +859,4 @@ public class RemoteAdtTestRunner extends RemoteTestRunner {
 		}
 	}
 }
+

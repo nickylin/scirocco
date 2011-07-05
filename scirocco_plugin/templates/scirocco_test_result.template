@@ -35,8 +35,6 @@
     </div></div>
     
     
-    
-    
 
     <!-- content starts -->
     <div id="content-outer"><div id="content-wrapper" class="container_16">
@@ -69,20 +67,21 @@
 					
 				<div id="test_case">
 					<h3>TestCase</h3>
-      <table width="1500px">
-        <tr>
-          <th width="50px">Result</th>
-          <th width="100px">Test name</th>
-          <th width="200px">Test procedure</th>
-          <th width="200px">Confirmation contents</th>
-          <th>Screenshots</th>
-          <th width="300px">Error Trace</th>
-        </tr>
-						<tr>
-							$SCIROCCO_TEST_RESULT
-						</tr>
-					</table>
-				<p>Å@</p>
+			      <table width="1500px">
+  			        <tr>
+    			      <th width="50px">Result</th>
+        			  <th width="100px">Test name</th>
+        			  <th width="200px">Test procedure</th>
+          			  <th width="200px">Confirmation contents</th>
+ 		              <th width="300px">Error Trace</th>
+		              <th width="300px">Memory Info</th>
+  			          <th>Screenshots</th>
+   				    </tr>
+					<tr>
+					$SCIROCCO_TEST_RESULT
+     				</tr>
+				 </table>
+				 <p>Å@</p>
 				</div><!--test_result -->
 
           <!-- main ends -->
