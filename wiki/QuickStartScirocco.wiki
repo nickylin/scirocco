@@ -65,7 +65,7 @@ Scirocco JUnit Test is able to run on android devices or emulator on your comput
 
 
 
- # Right click sample application project.
+ # Right click target test class.
  # Click `[Run As]` > `[Scirocco JUnit Test]` from menu and then Scirocco Unit Test will run.
 During the test, Scirocco work automatically.
 If Scirocco does not work, please return installing section and reinstall it.
