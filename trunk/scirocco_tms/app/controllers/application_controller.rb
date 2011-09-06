@@ -10,10 +10,10 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
-  # テストだけ使うBasic認証
+  ## テストだけ使うBasic認証
   protected
   def basic_authentication
-    authenticate_or_request_with_http_basic do |user, pass|
-    end
+  #  authenticate_or_request_with_http_basic do |user, pass|
+  #  end
   end
 end
