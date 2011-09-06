@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20110509174226) do
     t.text     "test_procedure"
     t.text     "confirmation_contents"
     t.text     "trace"
+    t.text     "memory_info"
     t.string   "screen_shot_path"
     t.datetime "created_at"
     t.datetime "updated_at"
