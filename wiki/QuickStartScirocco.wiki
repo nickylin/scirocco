@@ -8,7 +8,7 @@ Way to use of Scirocco is as below.
 <br>
 = Installing the Scirocco plugin =
 
- # Start Eclipse. `*1)`
+ # Start Eclipse3.6. `*1)`
  # Select `[Help]` tab from menu bar.
  # Click `[Install New Software]` from pull-down menu.
  # Click `[Add...]` button at the right of 'Work with' field.
