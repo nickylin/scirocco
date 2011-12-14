@@ -10,7 +10,7 @@
 = Scirocco Plug-in のインストール=
 
 実際にEclipseにSciroccoを導入する手順は以下のようになります.
- # Eclipse を起動 `*1)`
+ # Eclipse3.6 を起動 `*1)`
  # メニューバーから`[ヘルプ]`を選択
  # `[Install New Software]` をクリック
  # Work with 欄の右にある `[Add...]` ボタンをクリック
